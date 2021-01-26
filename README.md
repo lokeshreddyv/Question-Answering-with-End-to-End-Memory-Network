@@ -25,3 +25,5 @@ This architecture was published in 2015 and you can refer to the original [paper
 
 
 # Results
+
+![](asset/accuracy.png)
