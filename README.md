@@ -26,7 +26,11 @@ This architecture was published in 2015 and you can refer to the original [paper
 
 # Results
 
+The model is trained very quickly over 120 epochs with RMSprop and lr = 0.01. Accuracy on unseen test data reaches over 97%.
+
 ![](asset/accuracy.png)
+
+Excellent prediction on complex story.
 
 Story:
 - Daniel grabbed the apple there.
