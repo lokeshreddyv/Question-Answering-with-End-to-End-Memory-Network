@@ -27,3 +27,19 @@ This architecture was published in 2015 and you can refer to the original [paper
 # Results
 
 ![](asset/accuracy.png)
+
+Story:
+- Daniel grabbed the apple there.
+- Daniel went to the bedroom.
+- John moved to the garden.
+- Sandra journeyed to the office.
+- Daniel put down the apple.
+- Mary went to the bedroom.
+- Mary grabbed the apple there.
+- Sandra went back to the garden.
+- Mary went to the kitchen.
+- Daniel went to the office.
+
+Question: Is Mary in the garden?  ==> Answer: no
+Question: Is Mary in the kitchen?  ==> Answer: yes
+Question: Is Mary in the bedroom?  ==> Answer: no
