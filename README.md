@@ -7,11 +7,8 @@ This project uses a end-to-end memory network architecture to build a chatbot mo
 # Dataset
 
 The project uses the bAbI dataset from Facebook Research. The dataset is available [here](https://research.fb.com/downloads/babi/). bAbI dataset is composed of several sets to support 20 tasks for testing text understanding and reasoning as part of the bAbI project. The aim is that each task tests a unique aspect of text and reasoning, and hence test different capabilities of learning models. The datasets are in english.
-- For each task, there are 1000 questions for training, and 1000 for testing. So our project uses a set with 1000 questions for training and 1000 questions for testing.
-- A sample item in the set is composed of a story (several short sentences), a question and the answer to the question for training purpose.
 - Each task tests a unique aspect of learning capabilities: Dialog in the restaurant domain, children's book missing word test, Movie dialog, questions-detailed answers dataset, path or localization problems....
-
-In our case, the answers are simply Yes / No answers. Example of the dataset is show below.
+- For our task, there are 10,000 samples for training, and 1,000 for testing. A sample item in the set is composed of a story (several short sentences), a question and the answer to the question for training purpose. In our case, the answers are simply Yes / No answers. A sample of the dataset is show below.
 
 ![](asset/sample.jpg)
 
