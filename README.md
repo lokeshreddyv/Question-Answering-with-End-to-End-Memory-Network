@@ -15,7 +15,7 @@ The project uses the bAbI dataset from Facebook Research. The dataset is availab
 
 In our case, the answers are simply Yes / No answers. Example of the dataset is show below.
 
-![](asset/sample.png)
+![](asset/sample.jpg)
 
 # Memory Networks Architecture
 
