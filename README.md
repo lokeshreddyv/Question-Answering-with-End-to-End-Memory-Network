@@ -16,7 +16,7 @@ The project uses the bAbI dataset from Facebook Research. The dataset is availab
 
 This deep learning neural network architecture was published in 2015 and you can refer to the original [paper](https://arxiv.org/abs/1503.08895) for its detailed description. The architecture shares some early principles with attention model.
 
-The model takes two different inputs: A story (represented as a list of sentences all required to answer the question) and a question. The model performs calculation in order to combine these inputs and predict the answer. We can split the network into several functions:
+The model takes two different inputs: A story (represented as a list of sentences all required to answer the question) and a question. The model must take the entire story context into consideration to answer the query. The use of end-to-end memory network becomes handy in this use-case. The model performs calculation in order to combine these inputs and predict the answer. We can split the network into several functions:
 - Input Encoder m: This section transforms all input sentences into vectors of given embedding size and length of sentence_max_length. size: batch x sentence_max_length x embedding_size
 - Input Encoder c: This section transforms all input sentences into vectors of embedding size query_max_length and length of sentence_max_length. size: batch x sentence_max_length x query_max_length.
 - Question Encoder u: This section vectorizes the input question with given embedding size and query_max_length. size: batch x query_max_length x embedding_size
