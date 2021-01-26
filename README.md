@@ -23,7 +23,7 @@ The model takes two different inputs: A story (represented as a list of sentence
 
 Calculation steps:
 - Calculation input weights p: dot product between m and u followed by a softmax activation function generating weights p (batch x sentence_max_length x query_max_length)
-- Response vector O with the addition of p and input Encoder c => (batch x sentence_max_length x query_max_length)
+- Response vector O from the addition of p and input Encoder c => (batch x sentence_max_length x query_max_length)
 - Concatenation of Response vector O with Question Encoder u resulting into answer object of shape (samples x query_max_length x [sentence_max_length + embedding_size])
 - The answer object is then passed through an LSTM layer (dimension reduction) followed by a dense layer resulting into output vector of the size of the vocabulary (output shape = samples x vocabulary_size). Finally, a sigmoid generates a probability distribution over the vocabulary size. In this project, due to the training objectives, the probability arbitrates over 2 words of the vocabulary: 'yes' and 'no'.
 
