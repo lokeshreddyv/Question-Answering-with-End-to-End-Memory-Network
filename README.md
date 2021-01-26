@@ -14,7 +14,7 @@ The project uses the bAbI dataset from Facebook Research. The dataset is availab
 
 # Memory Networks Architecture
 
-This deep learning neural network architecture was published in 2015 and you can refer to the original [paper](https://arxiv.org/abs/1503.08895) for its detailed description. The architecture takes inpiration from attention model.
+This deep learning neural network architecture was published in 2015 and you can refer to the original [paper](https://arxiv.org/abs/1503.08895) for its detailed description. The architecture shares some early principles with attention model.
 
 The model takes two different inputs: A story (represented as a list of sentences all required to answer the question) and a question. The model performs calculation in order to combine these inputs and predict the answer. We can split the network into several functions:
 - Input Encoder m: This section transforms all input sentences into vectors of given embedding size and length of sentence_max_length. size: batch x sentence_max_length x embedding_size
