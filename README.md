@@ -27,6 +27,8 @@ Calculation steps:
 - Concatenation of Response vector O with Question Encoder u resulting into answer object of shape (samples x query_max_length x [sentence_max_length + embedding_size])
 - The answer object is then passed through an LSTM layer (dimension reduction) followed by a dense layer resulting into output vector of the size of the vocabulary (output shape = samples x vocabulary_size). Finally, a sigmoid generates a probability distribution over the vocabulary size. In this project, due to the training objectives, the probability arbitrates over 2 words of the vocabulary: 'yes' and 'no'.
 
+- Memory Networks model representation
+
 ![](asset/memory_networks.png)
 
 All parameters (embeddings, weight matrix to determine predicted answer) are learned during training.
