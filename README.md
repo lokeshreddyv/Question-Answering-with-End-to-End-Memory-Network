@@ -1,10 +1,8 @@
 # Question-Answering-with-End-to-End-Memory-Network
 Use end-to-end memory networks architecture for Question &amp; Answering NLP system
 
-
 # Project objective
-
-
+This project uses a end-to-end memory network architecture to build a chatbot model able to answer simple questions on a text corpus ('story'). Learning capabilities allow logical deduction on memorized corpus. The model is written in keras.
 
 # Dataset
 
@@ -19,14 +17,25 @@ In our case, the answers are simply Yes / No answers. Example of the dataset is 
 
 # Memory Networks Architecture
 
-This architecture was published in 2015 and you can refer to the original [paper](https://arxiv.org/abs/1503.08895) for its detailed description.
+This deep learning neural network architecture was published in 2015 and you can refer to the original [paper](https://arxiv.org/abs/1503.08895) for its detailed description. The architecture takes inpiration from attention model.
+
+The model takes two different inputs: A story (represented as a list of sentences all required to answer the question) and a question. The model performs calculation in order to combine these inputs and predict the answer. We can split the network into several functions:
+- Input Encoder m: This section transforms all input sentences into vectors of given embedding size and length of sentence_max_length. size: batch x sentence_max_length x embedding_size
+- Input Encoder c: This section transforms all input sentences into vectors of embedding size query_max_length and length of sentence_max_length. size: batch x sentence_max_length x query_max_length.
+- Question Encoder u: This section vectorizes the input question with given embedding size and query_max_length. size: batch x query_max_length x embedding_size
+
+Calculation steps:
+- Calculation of query x sentences weights: dot product between m and u followed by a softmax activation function generating weights p (batch x sentence_max_length x query_max_length)
+- Response vector O with the concatenation of p and input Encoder c => (batch x sentence_max_length x query_max_length)
+- Concatenation of Response vector O with input Encoder c
 
 ![](asset/memory_networks.png)
 
+All parameters (embeddings, weight matrix to determine predicted answer) are learned during training.
 
 # Results
 
-The model is trained very quickly over 120 epochs with RMSprop and lr = 0.01. Accuracy on unseen test data reaches over 97%.
+The model is trained very quickly over 120 epochs using RMSprop and lr = 0.01. Other hyperparameters: Embedding size of 128, batch size of 256. Accuracy on unseen test data reaches over 97%.
 
 ![](asset/accuracy.png)
 
