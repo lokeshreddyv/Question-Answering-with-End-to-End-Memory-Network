@@ -40,6 +40,6 @@ Story:
 - Mary went to the kitchen.
 - Daniel went to the office.
 
-Question: Is Mary in the garden?  ==> Answer: no
-Question: Is Mary in the kitchen?  ==> Answer: yes
-Question: Is Mary in the bedroom?  ==> Answer: no
+  - Question: Is Mary in the garden?  ==> Answer: no
+  - Question: Is Mary in the kitchen?  ==> Answer: yes
+  - Question: Is Mary in the bedroom?  ==> Answer: no
